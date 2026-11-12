@@ -1,0 +1,426 @@
+:root {
+    --red: #d71920;
+    --red-dark: #5b042a;
+    --white : #ffffff;
+    --tint: #fff3f3;
+    --text: #272834;
+    --muted: #625f5f;
+    --line: #e8d5d5;
+    --max-width: 100%;
+    --pink: #fe8f8ecc;
+    --mint-green: #93e9becc;
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+html, body {
+    max-width: 100%;
+    overflow-x: clip;
+}
+
+body {
+    font-family: system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
+    text-align: center;
+    line-height: 1.5;
+    margin: 0 auto; 
+    color: var(--text);
+    background-color: var(--white);
+    max-width: var(--max-width);
+    min-height: 100vh;
+    background-image: linear-gradient(rgba(255, 255, 255, 0.90), rgba(255, 255, 255, 0.90)),
+    url('https://knowascc.asean.org/files/media/2024/04/issue30-08-03-1.jpg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+}
+
+/*header and navigation ye*/
+header , h1 {
+    background-color: var(--red);
+    color: var(--white);
+    padding: 1.5rem 0rem 1rem;
+    border-bottom: 1px solid  var(--red);
+    text-align: center;
+}
+
+header {
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+.navigation-bar ul{
+    display: flex;
+    justify-content: center;
+    gap: 2rem;
+}
+
+.navigation-bar a {
+    color: var(--white);
+    text-decoration: none;
+    font-size: 1.25rem;
+
+}
+
+.navigation-bar a:hover {
+    color: var(--text);
+    border-bottom-color: var(--text);
+}
+
+.features-heading {
+    font-size: 1.5rem;
+    letter-spacing: 0.25em;
+    text-transform: uppercase;
+    color: var(--white);
+}
+
+.features-heading h1 {
+    padding: 2.5rem;
+    font-size: 3.5rem;
+}
+
+/*need to know what our website yada yada*/
+.features-heading p {
+    color: var(--text);
+    padding: 2rem;
+    font-size: 1.5rem;
+}
+
+.featuring {
+    margin: 0 auto;
+    font-size: 1.25rem;
+    color: var(--muted);
+    max-width: 120ch;
+}
+
+/*Cards*/
+.features-actual {
+    margin-top: 1.5rem;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 1.5rem;
+}
+
+/*Each Card*/
+[class^="feature-card"] {
+    width: 22rem;
+    display: flex;
+    flex-direction: column;
+    background: #fff;
+    border-radius: 0.25rem;
+    overflow: hidden;
+    box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 30%);
+}
+
+[class^= "feature-card"]:hover {
+    transform: translateY(-0.5rem);
+    box-shadow: 0 1rem 2rem rgba(0, 0, 0, 50%);
+}
+
+[class^="feature-card"] img {
+    display: block;
+    width: 100%;
+    height: 50%;
+    object-fit: cover;
+}
+
+[class^= "feature-card"] h2 {
+    text-align: center;
+    margin: 1rem 1rem 0.5rem;
+    font-size: 1.25rem;
+    color: var(--text);
+}
+
+[class^= "feature-card"] p {
+    text-align: center;
+    margin: 0.25rem 1rem 1rem;
+    color: var(--muted);
+    font-size: 1.20rem;
+}
+
+/*feature card bottom*/
+
+[class^="feature-card"] i, [class^="feature-card"] svg {
+    display: block;
+    padding: 1rem 0;
+    text-align: center;
+    font-size: 1.5rem;
+    color: #ffffff;
+    margin-top: auto; 
+    width: 100%;
+}
+
+.feature-card1 svg { background: var(--red); }
+.feature-card2 svg { background: var(--red); }
+.feature-card3 svg { background: var(--red); }
+.feature-card4 svg { background: var(--red); }
+
+/*Main*/
+main section {
+    border-top: 1px solid var(--line);
+    font-size: 1.15rem;
+}
+
+ /*Contact Info */
+ .contacts-container {
+    display: flex;
+    justify-content: center;
+    gap: 4rem;
+    text-align: left;
+ }
+
+ .contacts-heading {
+    font-size: 1.25rem;
+ }
+
+.contacts-left-column, .contacts-right-column {
+    display: flex;
+    flex-direction: column;
+    gap: 0.4rem;
+    font-size: 1rem;
+}
+
+/*other features*/
+.other-features {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    padding: 2rem 0;
+}
+
+.other-features h1 {
+    text-align: center;
+    text-transform: uppercase;
+    padding: 1.5rem;
+    background-color: var(--red);
+    color: var(--tint);
+    margin-bottom: 0;
+}
+
+.feature-row {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    padding: 4rem 8%;
+    gap: 4rem;
+}
+
+.feature-row.odd {
+    background-color: rgba(130, 1, 1, 0.8);
+    color: #fff;
+}
+
+.feature-row.odd .feature-text h3, 
+.feature-row.odd .feature-text p {
+    color: #fff;
+}
+
+.feature-row.even {
+    color: var(--text);
+    flex-direction: row-reverse;
+}
+
+.feature-row.even .feature-text h3 {
+    color: var(--text);
+}
+
+.feature-row.even .feature-text p {
+    color: var(--muted);
+}
+
+/*text format under other features*/
+
+.feature-text {
+    flex: 1;
+    text-align: left;
+}
+
+.feature-text h3 {
+    font-size: 1.75rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    margin-bottom: 1.25rem;
+    line-height: 1.1;
+}
+
+.feature-text p {
+    font-size: 1rem;
+    line-height: 1.6;
+}
+
+/*other features images*/
+.feature-media {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.feature-media img {
+    width: 100%;
+    max-width: 450px;
+    height: auto;
+    object-fit: contain; /*presevre og aspect ratio*/
+}
+
+
+/*comparison table*/
+.comparison {
+    width: 90vw;
+    margin: 0 auto 4rem auto;
+}
+
+.comparison-header{
+    font-size: 2rem;
+    text-align: center;
+    margin: 0 auto 1.5rem auto;
+}
+
+.comparison-table {
+    width: 100%;
+    margin: 0 auto;
+}
+
+.comparison-table-header {
+    font-size: 1.5rem;
+    padding: 2rem;
+    background-color: #f4f0f0;
+}
+
+.comparison-table-space {
+    width: 100%;
+    table-layout: fixed;
+    border-collapse: collapse;
+    font-size: 1.25rem;
+}
+
+.ff {
+    background-color: #F0F0F0cc;
+}
+
+.comparison-social-media, .comparison-aegis, .comparison-table-space td {
+    width: 100%;
+    padding: 2rem;
+    margin: 1rem;
+    word-wrap: break-word;
+    vertical-align: middle;
+    justify-content: center;
+}
+
+.comparison-social-media {
+    background-color: var(--pink);
+    color: #710505;
+}
+
+.comparison-aegis {
+    background-color: var(--mint-green);
+    color: #054A2A;
+    font-weight: 550;
+}
+
+.comparison-table-header {
+    font-weight: bold;
+    font-size: 1.75rem;
+    padding: 1.5rem;
+}
+
+footer {
+    display: flex;
+    background-color: var(--red);
+    color: var(--white);
+    border-top: 1px solid var(--red);
+    border-bottom: 1px solid var(--red);
+    justify-content: center;
+    margin: 4rem auto 0 auto;
+    box-shadow: 0rem 0.5rem 3rem rgba(0, 0, 0, 100%);
+
+}
+
+.contacts-email {
+    font-style: italic;
+}
+
+.privacy-policy {
+    font-size: 1.25rem;
+}
+
+.privacy-policy a {
+    color: var(--white);
+    text-decoration: none;
+}
+
+.privacy-policy a:hover {
+    color: var(--red-dark);
+    border-bottom-color: var(--red-dark);
+}
+
+@media (max-width: 768px ) {
+    .table-responsive {
+        width: 100%;
+        max-width: 100%;
+        overflow-x: auto;
+        -webkit-overflow-scrolling: touch;
+        margin-bottom: 1rem;
+        display: block;
+    }
+
+    .comparison {
+        width: 100%;
+        padding: 0 1rem;
+    }
+
+    .comparison-table-space {
+        min-width: 600px;
+    }
+
+    .feature-row, .feature-row.even {
+        flex-direction: column;
+        padding: 2.5rem 1.5rem;
+        gap: 2rem;
+    }
+
+    .feature-text {
+        text-align: center;
+    }
+
+    .feature-text h3 {
+        font-size : 1.5rem;
+    }
+    
+    footer {
+    display: flex;
+    background-color: var(--red);
+    color: var(--white);
+    border-top: 1px solid var(--red);
+    border-bottom: 1px solid var(--red);
+    justify-content: center;
+    margin: 0 auto;
+    box-shadow: 0rem 0.5rem 3rem rgba(0, 0, 0, 100%);
+    
+    }
+
+    .contacts-email {
+    font-style: italic;
+    }
+
+    .privacy-policy {
+    font-size: 1.25rem;
+    }
+
+    .privacy-policy a {
+    color: var(--white);
+    text-decoration: none;
+    }
+
+    .privacy-policy a:hover {
+    color: var(--red-dark);
+    border-bottom-color: var(--red-dark);
+    } 
+}
