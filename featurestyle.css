@@ -40,37 +40,7 @@ body {
 }
 
 /*header and navigation ye*/
-header , h1 {
-    background-color: var(--red);
-    color: var(--white);
-    padding: 1.5rem 0rem 1rem;
-    border-bottom: 1px solid  var(--red);
-    text-align: center;
-}
 
-header {
-    position: sticky;
-    top: 0;
-    z-index: 1000;
-}
-
-.navigation-bar ul{
-    display: flex;
-    justify-content: center;
-    gap: 2rem;
-}
-
-.navigation-bar a {
-    color: var(--white);
-    text-decoration: none;
-    font-size: 1.25rem;
-
-}
-
-.navigation-bar a:hover {
-    color: var(--text);
-    border-bottom-color: var(--text);
-}
 
 .features-heading {
     font-size: 1.5rem;
@@ -80,6 +50,12 @@ header {
 }
 
 .features-heading h1 {
+    background-color: var(--red);
+    color: var(--white);
+    padding: 1rem 0rem 1rem;
+    border-top: 1px solid var(--red);
+    border-bottom: 1px solid var(--red);
+    text-align: center;
     padding: 2.5rem;
     font-size: 3.5rem;
 }
@@ -165,25 +141,6 @@ header {
 main section {
     border-top: 1px solid var(--line);
     font-size: 1.15rem;
-}
-
- /*Contact Info */
- .contacts-container {
-    display: flex;
-    justify-content: center;
-    gap: 4rem;
-    text-align: left;
- }
-
- .contacts-heading {
-    font-size: 1.25rem;
- }
-
-.contacts-left-column, .contacts-right-column {
-    display: flex;
-    flex-direction: column;
-    gap: 0.4rem;
-    font-size: 1rem;
 }
 
 /*other features*/
@@ -331,36 +288,6 @@ main section {
     padding: 1.5rem;
 }
 
-footer {
-    display: flex;
-    background-color: var(--red);
-    color: var(--white);
-    border-top: 1px solid var(--red);
-    border-bottom: 1px solid var(--red);
-    justify-content: center;
-    margin: 4rem auto 0 auto;
-    box-shadow: 0rem 0.5rem 3rem rgba(0, 0, 0, 100%);
-
-}
-
-.contacts-email {
-    font-style: italic;
-}
-
-.privacy-policy {
-    font-size: 1.25rem;
-}
-
-.privacy-policy a {
-    color: var(--white);
-    text-decoration: none;
-}
-
-.privacy-policy a:hover {
-    color: var(--red-dark);
-    border-bottom-color: var(--red-dark);
-}
-
 @media (max-width: 768px ) {
     .table-responsive {
         width: 100%;
@@ -393,34 +320,5 @@ footer {
     .feature-text h3 {
         font-size : 1.5rem;
     }
-    
-    footer {
-    display: flex;
-    background-color: var(--red);
-    color: var(--white);
-    border-top: 1px solid var(--red);
-    border-bottom: 1px solid var(--red);
-    justify-content: center;
-    margin: 0 auto;
-    box-shadow: 0rem 0.5rem 3rem rgba(0, 0, 0, 100%);
-    
-    }
 
-    .contacts-email {
-    font-style: italic;
-    }
-
-    .privacy-policy {
-    font-size: 1.25rem;
-    }
-
-    .privacy-policy a {
-    color: var(--white);
-    text-decoration: none;
-    }
-
-    .privacy-policy a:hover {
-    color: var(--red-dark);
-    border-bottom-color: var(--red-dark);
-    } 
 }
