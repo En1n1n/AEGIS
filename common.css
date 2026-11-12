@@ -37,6 +37,11 @@ header {
     border-bottom-color: var(--red-dark);
 }
 
+section {
+    padding: 2.5rem 0;
+    text-align: center;
+}
+
 /*footer and contacts*/
 footer {
     display: flex;
@@ -86,7 +91,7 @@ footer {
     border-bottom-color: var(--red-dark);
 } 
 
-@media screen and (max-wdith: 768px){
+@media screen and (max-width: 768px){
     .navigation-bar ul {
         flex-wrap: wrap;
         gap: 1rem;
