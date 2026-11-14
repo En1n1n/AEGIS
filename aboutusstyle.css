@@ -33,37 +33,13 @@ body {
 }
 
 /*header and navigation ye*/
-header , h1 {
+.heading h1 {
     background-color: var(--red);
     color: var(--white);
-    padding: 1.5rem 0rem 1rem;
+    padding: 1rem 0rem 1rem;
     border-top: 1px solid var(--red);
-    border-bottom: 1px solid  var(--red);
+    border-bottom: 1px solid var(--red);
     text-align: center;
-}
-
-header {
-    position: sticky;
-    top: 0;
-    z-index: 1000;
-}
-
-.navigation-bar ul{
-    display: flex;
-    justify-content: center;
-    gap: 2rem;
-}
-
-.navigation-bar a {
-    color: var(--white);
-    text-decoration: none;
-    font-size: 1.25rem;
-
-}
-
-.navigation-bar a:hover {
-    color: var(--text);
-    border-bottom-color: var(--text);
 }
 
 .heading {
@@ -71,10 +47,13 @@ header {
     letter-spacing: 0.25em;
     text-transform: uppercase;
     color: var(--white);
+    padding: 0;
+    box-shadow: 0rem 0.5rem 3rem rgba(0, 0, 0, 50%);
+}
+
+.heading h1 {
     padding: 2.5rem;
     font-size: 3.5rem;
-
-    box-shadow: 0rem 0.5rem 3rem rgba(0, 0, 0, 50%);
 }
 
 h2, .VM h3 {
@@ -148,57 +127,6 @@ main section {
     border-top: 1px solid var(--line);
     font-size: 1.15rem;
 }
-
-footer {
-    display: flex;
-    background-color: var(--red);
-    color: var(--white);
-    border-top: 1px solid var(--red);
-    border-bottom: 1px solid var(--red);
-    justify-content: center;
-    margin: 0 auto;
-    box-shadow: 0rem 0.5rem 3rem rgba(0, 0, 0, 100%);
-    
-}
-
- /*Contact Info */
-
- .contacts-heading {
-    font-size:1.25rem;
-    margin-top: 2rem;
- }
- .contacts-container {
-    display: flex;
-    justify-content: center;
-    gap: 4rem;
-    text-align: left;
-    margin-top: 0;
-    padding: 2rem;
- }
-
-.contacts-left-column, .contacts-right-column {
-    display: flex;
-    flex-direction: column;
-    gap: 0.4rem;
-    font-size: 0.9rem;
-}
-.contacts-email {
-    font-style: italic;
-}
-
-.privacy-policy {
-    font-size: 1.25rem;
-}
-
-.privacy-policy a {
-    color: var(--white);
-    text-decoration: none;
-}
-
-.privacy-policy a:hover {
-    color: var(--red-dark);
-    border-bottom-color: var(--red-dark);
-} 
 
 @media screen and (max-width: 768px) {
     footer {
