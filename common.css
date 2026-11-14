@@ -81,6 +81,11 @@ footer {
     font-size: 1.25rem;
 }
 
+.privacy-policy-content {
+    margin: 0 auto;
+    max-width: 120ch;
+}
+
 .privacy-policy a {
     color: var(--white);
     text-decoration: none;
@@ -90,6 +95,18 @@ footer {
     color: var(--red-dark);
     border-bottom-color: var(--red-dark);
 } 
+
+.information-collection-content ul {
+    gap: 1rem;
+    padding: 0 1rem;
+    max-width: 800px;
+    margin: 0 auto;
+    text-align: left;
+}
+
+.information-collection-content li {
+  margin-bottom: 10px;
+}
 
 @media screen and (max-width: 768px){
     .navigation-bar ul {
