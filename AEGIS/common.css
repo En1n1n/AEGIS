@@ -9,45 +9,51 @@
 
 /*header and navigation*/
 header {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
     position: sticky;
     top: 0;
     z-index: 1000;
-    display: flex;
-    align-items: center;
-    justify-content: flex-end;
-    min-height: 100px;
     background-color: var(--red);
     color: var(--white);
-    padding: 1rem 2rem 1rem;
+    padding: 1rem 0rem 1rem;
     border-top: 1px solid var(--red);
     border-bottom: 1px solid var(--red);
-    
 }
 
 #logo {
-    position: absolute;
-    left: 1rem;
-    top: 50%;
-    transform: translateY(-45%);
+    display: flex;
+    align-items: center;
+    height: 100px;
+    flex: 0 0 auto;
 }
 
 #logo img {
     display: block;
-    height: 100px;
+    height: 100%;
     width: auto;
-    margin-bottom: 1.25rem;
+}
+
+.navigation-bar {
+    margin-left: auto;
 }
 
 .navigation-bar ul {
     display: flex;
     align-items: center;
+    justify-content: flex-end;
     gap: 2.5rem;
+    list-style: none;
+    margin: 0;
+    padding: 0 2rem;
 }
 
 .navigation-bar a {
     color: var(--white);
     text-decoration: none;
     font-size: 1.25rem;
+    text-align: left;
 }
 
 .navigation-bar a:hover {
