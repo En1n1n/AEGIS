@@ -12,20 +12,29 @@ header {
     position: sticky;
     top: 0;
     z-index: 1000;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    min-height: 100px;
     background-color: var(--red);
     color: var(--white);
-    padding: 1rem 0rem 1rem;
+    padding: 1rem 2rem 1rem;
     border-top: 1px solid var(--red);
     border-bottom: 1px solid var(--red);
 
 }
 
 #logo {
-    height: 70px;
+    position: absolute;
+    left: 1rem;
+    top: 50%;
+    transform: translateY(-45%);
+}
+
+#logo img {
+    display: block;
+    height: 100px;
     width: auto;
-    align-items: left;
-    padding-left: 0;
-    justify-items: left;
 }
 
 .navigation-bar ul {

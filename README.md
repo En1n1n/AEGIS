@@ -1,2 +1,0 @@
-# AEGIS
-For schoolwork
