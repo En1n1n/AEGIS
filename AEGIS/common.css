@@ -21,7 +21,7 @@ header {
     padding: 1rem 2rem 1rem;
     border-top: 1px solid var(--red);
     border-bottom: 1px solid var(--red);
-
+    
 }
 
 #logo {
@@ -35,6 +35,7 @@ header {
     display: block;
     height: 100px;
     width: auto;
+    margin-bottom: 1.25rem;
 }
 
 .navigation-bar ul {
