@@ -1,6 +1,7 @@
 :root {
     --red: #d71920;
     --red-dark: #5b042a;
+    --red-dark-rgb: 91, 4, 42;
     --white : #ffffff;
     --tint: #fff3f3;
     --text: #272834;
@@ -144,6 +145,12 @@ main section {
 
 /*HOTLINES*/
 
+.resources h3 {
+    font-weight: 700;
+    font-size: 2rem;
+    text-transform: uppercase;
+}
+
 .resources-space {
   display: flex;
   justify-content: center;
@@ -160,6 +167,35 @@ main section {
   flex-direction: column;
   align-items: top;
   text-align: left;
+}
+
+.hotlines-main-space {
+    display: grid;
+    grid-template-columns: repeat(2,minmax( 0, 1fr ));
+    gap: 1.5rem;
+    line-height: 1.5rem;
+}
+
+.hotlines-main-space > div {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+}
+
+.hotlines-main-space > div:last-child  {
+    grid-column: 1 / -1;
+    width: min(100%, 20rem);
+    justify-self: center;
+}
+
+.hotlines-main-space img {
+    display: block;
+    width: 100%;
+    max-width: 8rem;
+    height: 7rem;
+    margin: 0 auto 0.75rem;
+    object-fit: contain;
 }
 
 .hotline-num {
@@ -209,10 +245,8 @@ main section {
     overflow-x: auto; /*horizontal scrolling*/
     scroll-snap-type: x mandatory; /*snappy scrolling*/
     scroll-behavior: smooth;
-    gap: 2rem;
     width: 100%;
     margin: 0 auto;
-    padding: 1.5rem 1rem;
     -webkit-overflow-scrolling: touch; /*IOS*/
 }
 
@@ -232,11 +266,9 @@ main section {
     flex-direction: row;
     align-items: center;
     justify-content: space-between;
-    gap: 2.5rem;
     border-radius: 12px;
     background: transparent;
     box-shadow: none;
-    padding: 2rem;
 }
 
 .PandS {
@@ -245,15 +277,32 @@ main section {
 
 /*Other features - text*/
 .feature-text {
-    flex: 1;
-    text-align: left;
+    position: absolute;
+    z-index: 1;
+    top: 50%;
+    left: 2rem;
+    transform: translateY(-50%);
+    width: min(55%, 32rem);
+    color: white;
+    left: clamp(1rem, 4vw, 2.5rem);
+}
+
+.PandS .feature-text {
+    left: auto;
+    right: clamp(1rem, 4vw, 2.5rem);
+    text-align: right;
+}
+
+.PandS .feature-text h3,
+.PandS .feature-text p {
+    text-align: right;
 }
 
 .feature-text h3 {
     font-size: 2.5rem;
     font-weight: 700;
     line-height: 1.2;
-    color: var(--red-dark);
+    color: white;
     margin-bottom: 1.25rem;
     text-align: left;
     background-color: transparent;
@@ -263,7 +312,7 @@ main section {
 .feature-text p {
     font-size: 1.25rem;
     line-height: 1.5;
-    color: var(--muted);
+    color: white;
     text-align: left;
     padding: 0;
     margin: 0;
@@ -275,14 +324,43 @@ main section {
     display: flex;
     justify-content: center;
     align-items: center;
+    position: relative;
+    width: 100%;
+    min-width: 0;
+    overflow: hidden;
+    display: block;
+    padding: 0;
 }
 
 .feature-image img {
     width: 100%;
-    max-width: 800px;
+    max-width: 100%;
     height: auto;
     object-fit: cover;
     max-height: 480px;
+    display: block;
+}
+
+.feature-image::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+    pointer-events: none;
+    background: linear-gradient(
+        90deg,
+        rgba(var(--red-dark-rgb), 1),
+        rgba(var(--red-dark-rgb), 0.50) 60%,
+        transparent 75%
+    );
+}
+
+.PandS .feature-image::after {
+    background: linear-gradient(
+        270deg,
+        rgba(var(--red-dark-rgb), 0.90),
+        rgba(var(--red-dark-rgb), 0.40) 60%,
+        transparent 75%
+    );
 }
 
 /*Roadmap*/

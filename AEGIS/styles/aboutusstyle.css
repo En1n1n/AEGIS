@@ -1,5 +1,5 @@
 :root {
-    --red: #d71920;
+    --red: #9e080d;
     --red-dark: #5b042a;
     --white : #ffffff;
     --tint: #fff3f3;
@@ -81,7 +81,7 @@ h2, .VM h3 {
     margin-bottom: 1.5rem;
 }
 
-.team-first-row, .team-second-row {
+.team-row {
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
@@ -90,15 +90,25 @@ h2, .VM h3 {
     padding: 0 1rem;
 }
 
+.socmed-icon {
+    font-size: 1.90rem;
+    color: var(--muted);
+    margin: 0.75rem;
+}
+
 [class^="team-member-"] {
     margin-top: 1rem;
     width: min(20rem, 100%); /* so it shrinks:3 */
     background: #fff;
-    border-radius: 0.3rem;
+    border-radius: 1rem;
     overflow: hidden;
     box-shadow: 0 0.75rem 1rem rgba(0, 0, 0, 25%);
 }
 
+[class^= "team-member-"]:hover {
+    transform: translateY(-0.5rem);
+    box-shadow: 0 1rem 2rem rgba(0, 0, 0, 50%);
+}
 .team-member-fifth {
     margin-top: 1.25rem;
 }

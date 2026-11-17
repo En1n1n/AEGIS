@@ -1,7 +1,7 @@
 :root {
-    --red: #d71920;
+    --red: #9f0d12;
     --red-dark: #5b042a;
-    --white: #ffffff;
+    --white: #dddcdc;
     --text: #272834;
     --muted: #625f5f;
     --max-width: 100%;
@@ -9,27 +9,51 @@
 
 /*header and navigation*/
 header {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
     position: sticky;
     top: 0;
     z-index: 1000;
     background-color: var(--red);
     color: var(--white);
-    padding: 1rem 0rem 1rem;
+    padding: 0.5rem 1rem;
     border-top: 1px solid var(--red);
     border-bottom: 1px solid var(--red);
-    text-align: center;
+}
+
+#logo {
+    display: flex;
+    align-items: center;
+    height: 70px;
+    flex: 0 0 auto;
+}
+
+#logo img {
+    display: block;
+    height: 100%;
+    width: 8;
+}
+
+.navigation-bar {
+    margin-left: auto;
 }
 
 .navigation-bar ul {
     display: flex;
-    justify-content: center;
-    gap: 2.5rem;
+    align-items: center;
+    justify-content: flex-end;
+    gap: 1.25rem;
+    list-style: none;
+    margin: 0;
+    padding: 0 2rem;
 }
 
 .navigation-bar a {
     color: var(--white);
     text-decoration: none;
-    font-size: 1.25rem;
+    font-size: 1.15rem;
+    text-align: left;
 }
 
 .navigation-bar a:hover {
@@ -40,6 +64,11 @@ header {
 section {
     padding: 2.5rem 0;
     text-align: center;
+}
+
+.body{
+    padding: 0;
+    margin: 0;
 }
 
 /*footer and contacts*/
@@ -81,6 +110,11 @@ footer {
     font-size: 1.25rem;
 }
 
+.privacy-policy-content {
+    margin: 0 auto;
+    max-width: 120ch;
+}
+
 .privacy-policy a {
     color: var(--white);
     text-decoration: none;
@@ -90,6 +124,18 @@ footer {
     color: var(--red-dark);
     border-bottom-color: var(--red-dark);
 } 
+
+.information-collection-content ul {
+    gap: 1rem;
+    padding: 0 1rem;
+    max-width: 800px;
+    margin: 0 auto;
+    text-align: left;
+}
+
+.information-collection-content li {
+  margin-bottom: 10px;
+}
 
 @media screen and (max-width: 768px){
     .navigation-bar ul {

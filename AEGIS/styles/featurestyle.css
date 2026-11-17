@@ -7,8 +7,6 @@
     --muted: #625f5f;
     --line: #e8d5d5;
     --max-width: 100%;
-    --pink: #fe8f8ecc;
-    --mint-green: #93e9becc;
 }
 
 * {
@@ -58,6 +56,7 @@ body {
     text-align: center;
     padding: 2.5rem;
     font-size: 3.5rem;
+    box-shadow: 0rem 0.5rem 3rem rgba(0, 0, 0, 50%);
 }
 
 /*need to know what our website yada yada*/
@@ -144,6 +143,7 @@ main section {
 }
 
 /*other features*/
+
 .other-features {
     width: 100%;
     display: flex;
@@ -229,6 +229,10 @@ main section {
 
 
 /*comparison table*/
+table, th, td {
+  border: 3px solid black;
+  border-collapse: collapse;
+}
 .comparison {
     width: 90vw;
     margin: 0 auto 4rem auto;
@@ -256,10 +260,6 @@ main section {
     table-layout: fixed;
     border-collapse: collapse;
     font-size: 1.25rem;
-}
-
-.ff {
-    background-color: #F0F0F0cc;
 }
 
 .comparison-social-media, .comparison-aegis, .comparison-table-space td {
