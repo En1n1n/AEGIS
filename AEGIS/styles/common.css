@@ -1,7 +1,7 @@
 :root {
-    --red: #d71920;
+    --red: #990a0f;
     --red-dark: #5b042a;
-    --white: #ffffff;
+    --white: #cfcdd4;
     --text: #272834;
     --muted: #625f5f;
     --max-width: 100%;
@@ -25,7 +25,7 @@ header {
 #logo {
     display: flex;
     align-items: center;
-    height: 100px;
+    height: 60px;
     flex: 0 0 auto;
 }
 
@@ -52,7 +52,7 @@ header {
 .navigation-bar a {
     color: var(--white);
     text-decoration: none;
-    font-size: 1.25rem;
+    font-size: 1.15rem;
     text-align: left;
 }
 

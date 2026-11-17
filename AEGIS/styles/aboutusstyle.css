@@ -82,12 +82,11 @@ h2, .VM h3 {
 }
 
 .team-row {
-    display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
-    justify-content: center;
-    gap: 2rem;
-    padding: 0 1rem;
+    display: grid;
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+    gap: 1.5rem;
+    width: min(100% - 2rem, 80rem);
+    margin: 0 auto;
 }
 
 .socmed-icon {
@@ -97,8 +96,7 @@ h2, .VM h3 {
 }
 
 [class^="team-member-"] {
-    margin-top: 1rem;
-    width: min(20rem, 100%); /* so it shrinks:3 */
+    width: 100%;
     background: #fff;
     border-radius: 1rem;
     overflow: hidden;
@@ -109,10 +107,6 @@ h2, .VM h3 {
     transform: translateY(-0.5rem);
     box-shadow: 0 1rem 2rem rgba(0, 0, 0, 50%);
 }
-.team-member-fifth {
-    margin-top: 1.25rem;
-}
-
 [class^="team-member-"] h2 {
     margin-top: 1.25rem;
     font-size: 1.50rem;
@@ -122,13 +116,12 @@ img {
     display: block;
     width: 100%;
     max-width: 100%;
-    object-fit: cover;
     height: auto;
-    object-fit: cover;
 }
 
 [class^="team-member-"] img {
-    aspect-ratio: 4/5;
+    aspect-ratio: 4 / 5;
+    object-fit: cover;
 }
 
 /*Main*/
@@ -139,6 +132,10 @@ main section {
 }
 
 @media screen and (max-width: 768px) {
+    .team-row {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+
     footer {
     display: flex;
     background-color: var(--red);
@@ -168,4 +165,10 @@ main section {
     color: var(--red-dark);
     border-bottom-color: var(--red-dark);
 } 
+}
+
+@media screen and (max-width: 520px) {
+.team-row {
+    grid-template-columns: 1fr;
+}
 }
