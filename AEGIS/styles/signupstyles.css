@@ -200,13 +200,15 @@ button {
     flex: 1;
     width: 50%;
     position: relative;
+    overflow: hidden;
 }
 
-#signupimg {
+.signup-image img {
+    display: block;
     width: 100%;
     height: 100%;
     object-fit: cover;
-    display: block;
+    object-position: center;
 }
 
 /*notice and footer*/
@@ -244,12 +246,13 @@ button {
 @media (max-width: 800px) {
     .page-container {
         flex-direction: column;
-        align-items: center;
+        align-items: stretch;
     }
     .left-section, .signup-image {
         width: 100%;
     }
     .signup-image {
-        height: 300px;
+        flex: 0 0 auto;
+        height: clamp(14rem, 38vh, 22rem);
     }
 }

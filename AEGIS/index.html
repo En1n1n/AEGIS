@@ -143,16 +143,81 @@
 				</div>
 				
                 <!--DIV2-->
-				<div class="disaster-preparedness-main">
 				<h5 class="emergency-survival-supplies">72-Hour Emergency Survival Supplies</h5>
-					<ul>
-						<li> 1 gallon of drinking water per person per day <i class="fa-solid fa-bottle-water"></i> </li>
-						<li>Canned goods w/ manual can opener <i class="fa-solid fa-jar"></i> </li>
-						<li>First Aid Kit with prescribed medications <i class="fa-solid fa-suitcase-medical"></i> </li>
-						<li>Power bank, battery radio, and flashlights <i class="fa-solid fa-battery-three-quarters"></i> </li>
-						<li>Waterproof pouch including your government ID and cash <i class="fa-solid fa-wallet"></i> </li>
-					</ul>
-				</div> <!--DIV2 END-->
+				<div class="guide-carousel" role="group" aria-label="72-hour emergency survival supplies">
+                    <input class="guide-slide-input" type="radio" name="guide-slide" id="guide-slide-water" aria-label="Drinking water card" checked>
+                    <input class="guide-slide-input" type="radio" name="guide-slide" id="guide-slide-food" aria-label="Food card">
+                    <input class="guide-slide-input" type="radio" name="guide-slide" id="guide-slide-first-aid" aria-label="First aid card">
+                    <input class="guide-slide-input" type="radio" name="guide-slide" id="guide-slide-power" aria-label="Power and lighting card">
+                    <input class="guide-slide-input" type="radio" name="guide-slide" id="guide-slide-documents" aria-label="Documents and cash card">
+
+                    <div class="guide-viewport">
+                      <div class="guide-track">
+                        <article class="guide-card">
+                            <img src="https://media.istockphoto.com/photos/water-bottling-factory-picture-id1161754684?k=20&m=1161754684&s=612x612&w=0&h=dSvZAh7ZJC00cJuVPTtWGQkqirpbBWTE2Dro_gkxJRU=" alt="Emergency drinking water">
+                            <div class="guide-card-copy">
+                                <h6>Drinking water</h6>
+                                <p>1 gallon of drinking water per person per day.</p>
+                            </div>
+                        </article>
+
+                        <article class="guide-card">
+                            <img src="https://media.pelican.com/img/blog/pelican-blog-80-canned-goods.jpg" alt="Canned emergency food">
+                            <div class="guide-card-copy">
+                                <h6>Food</h6>
+                                <p>Canned goods and a manual can opener.</p>
+                            </div>
+                        </article>
+
+                        <article class="guide-card">
+                            <img src="https://uoflhealth.org/wp-content/uploads/2021/11/First-Aid-kit.jpg" alt="First aid kit">
+                            <div class="guide-card-copy">
+                                <h6>First Aid Kit</h6>
+                                <p>First aid kit with prescribed medications.</p>
+                            </div>
+                        </article>
+
+                        <article class="guide-card">
+                            <img src="https://www.shutterstock.com/image-photo/lithium-portable-power-station-charging-600nw-2247665091.jpg" alt="Battery and power bank">
+                            <div class="guide-card-copy">
+                                <h6>Power and lighting</h6>
+                                <p>Power bank, battery radio, and flashlights.</p>
+                            </div>
+                        </article>
+
+                        <article class="guide-card">
+                            <img src="https://th.bing.com/th/id/R.0f58c1ccf631a18234d8fdc7006c23c8?rik=qStH9L7xRjBrag&riu=http%3a%2f%2fwww.purpink.co.ke%2fcdn%2fshop%2fcollections%2finterior-black-Dream-travel-bag.jpg%3fv%3d1774275133&ehk=lyKC9s6KruNZ0aeBKDZERC2S%2fLjU7XjwW9BA9OGXvgk%3d&risl=&pid=ImgRaw&r=0" alt="Pouch with identification and cash">
+                            <div class="guide-card-copy">
+                                <h6>Documents and cash</h6>
+                                <p>Keep your government ID and cash in a waterproof pouch.</p>
+                            </div>
+                        </article>
+                      </div>
+                    </div>
+
+                    <div class="guide-controls" aria-hidden="true">
+                        <div class="guide-control-set controls-water">
+                            <label class="guide-arrow-left" for="guide-slide-documents"></label>
+                            <label class="guide-arrow-right" for="guide-slide-food"></label>
+                        </div>
+                        <div class="guide-control-set controls-food">
+                            <label class="guide-arrow-left" for="guide-slide-water"></label>
+                            <label class="guide-arrow-right" for="guide-slide-first-aid"></label>
+                        </div>
+                        <div class="guide-control-set controls-first-aid">
+                            <label class="guide-arrow-left" for="guide-slide-food"></label>
+                            <label class="guide-arrow-right" for="guide-slide-power"></label>
+                        </div>
+                        <div class="guide-control-set controls-power">
+                            <label class="guide-arrow-left" for="guide-slide-first-aid"></label>
+                            <label class="guide-arrow-right" for="guide-slide-documents"></label>
+                        </div>
+                        <div class="guide-control-set controls-documents">
+                            <label class="guide-arrow-left" for="guide-slide-power"></label>
+                            <label class="guide-arrow-right" for="guide-slide-water"></label>
+                        </div>
+                    </div>
+                </div> <!--DIV2 END-->
 
 			</div> <!--DISASTER PREPAREDNESS SPACE DIV END-->
     
@@ -172,28 +237,26 @@
                         <h2>Roadmap</h2>
                     </div>
 
-                    <!--DIV2-->
-                    <div class="roadmap-goal-one">
-                        <h3>Alpha Testing</h3>
-                        <p>Internal testing by developers to ensure minimal bugs and smoother user experience.</p>
-                    </div>
+                    <div class="roadmap-timeline">
+                        <div class="roadmap-goal-one">
+                            <h3>Alpha Testing</h3>
+                            <p>Internal testing by developers to ensure minimal bugs and smoother user experience.</p>
+                        </div>
 
-                    <!--DIV3-->
-                    <div class="roadmap-goal-two">
-                        <h3>Beta Testing</h3>
-                        <p>Public testing and API integration for feedback gathering from selected testers. </p>
-                    </div>
+                        <div class="roadmap-goal-two">
+                            <h3>Beta Testing</h3>
+                            <p>Public testing and API integration for feedback gathering from selected testers.</p>
+                        </div>
 
-                    <!--DIV4-->
-                    <div class="roadmap-goal-three">
-                        <h3>Public Release</h3>
-                        <p>Full release of the platform to the public.</p>
-                    </div>
+                        <div class="roadmap-goal-three">
+                            <h3>Public Release</h3>
+                            <p>Full release of the platform to the public.</p>
+                        </div>
 
-                    <!--DIV4-->
-                    <div class="roadmap-goal-four">
-                        <h3>Platform Scaling</h3>
-                        <p>Growing and scaling of the platform to accommodate more users and implementation of Quality of Life features.</p>
+                        <div class="roadmap-goal-four">
+                            <h3>Platform Scaling</h3>
+                            <p>Growing and scaling of the platform to accommodate more users and implementation of Quality of Life features.</p>
+                        </div>
                     </div>
 
                 </div> <!--ROADMAP-TEXT-END-->

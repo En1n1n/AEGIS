@@ -1,7 +1,6 @@
 :root {
     --red: #d71920;
     --red-dark: #5b042a;
-    --red-dark-rgb: 91, 4, 42;
     --white : #ffffff;
     --tint: #fff3f3;
     --text: #272834;
@@ -41,17 +40,21 @@ body {
     letter-spacing: 0.25em;
     text-transform: uppercase;
     color: var(--white);
-    box-shadow: 0rem 0.5rem 3rem rgba(0, 0, 0, 50%);
 }
 
 .heading h1 {
     background-color: var(--red);
     padding: 1rem 0rem 1rem;
-    border-top: 1px solid var(--red);
     border-bottom: 1px solid var(--red);
     text-align: center;
     padding: 2.5rem;
     font-size: 3.5rem;
+    background-color: var(--red);
+    background-image:
+        linear-gradient(rgba(153, 10, 15, 0.86), rgba(153, 10, 15, 0.86)),
+        url("https://i.pinimg.com/originals/78/94/ab/7894ab72fe8a14d59a419c89d524f77c.jpg?nii=t");
+    background-size: auto, 512px 512px;
+background-repeat: no-repeat, repeat; 
 }
 
 /* sections */
@@ -155,7 +158,7 @@ main section {
   display: flex;
   justify-content: center;
   align-items: top;
-  gap: 2rem;
+  gap: 4rem;
   max-width: 100rem;
   padding: 1.5rem;
   margin: 0 auto;
@@ -164,6 +167,8 @@ main section {
 
 .hotlines-space {
   display: flex;
+  flex: 1 1 0;
+  min-width: 0;
   flex-direction: column;
   align-items: top;
   text-align: left;
@@ -185,7 +190,7 @@ main section {
 
 .hotlines-main-space > div:last-child  {
     grid-column: 1 / -1;
-    width: min(100%, 20rem);
+    width: min(100%, 30rem);
     justify-self: center;
 }
 
@@ -199,12 +204,15 @@ main section {
 }
 
 .hotline-num {
+    font-size: 2rem;
     font-style: italic;
     font-weight: bold;
 }
 
 .disaster-preparedness-space {
   display: flex;
+  flex: 1.4 1 0;
+  min-width: 0;
   flex-direction: column;
   align-items: top;
   text-align: left;
@@ -227,6 +235,151 @@ main section {
   color: var(--red);
   margin-bottom: 0.5rem;
   text-align: center;
+}
+
+/*carousel*/
+.guide-carousel {
+    position: relative;
+    width: min(100%, 100rem);
+    margin: 1rem auto;
+}
+
+.guide-slide-input {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    overflow: hidden;
+    clip: rect(0, 0, 0, 0);
+    white-space: nowrap;
+    clip-path: inset(50%);
+}
+
+.guide-viewport {
+    margin: 0 3rem;
+    overflow: hidden;
+    border-radius: 0.75rem;
+}
+
+.guide-track {
+    display: flex;
+    transition: transform 400ms ease;
+}
+
+.guide-card {
+    position: relative;
+    flex: 0 0 100%;
+    height: 30rem;
+    overflow: hidden;
+    border-radius: 0.75rem;
+}
+
+#guide-slide-food:checked ~ .guide-viewport .guide-track {
+    transform: translateX(-100%);
+}
+
+#guide-slide-first-aid:checked ~ .guide-viewport .guide-track {
+    transform: translateX(-200%);
+}
+
+#guide-slide-power:checked ~ .guide-viewport .guide-track {
+    transform: translateX(-300%);
+}
+
+#guide-slide-documents:checked ~ .guide-viewport .guide-track {
+    transform: translateX(-400%);
+}
+
+.guide-card img {
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.guide-card::after {
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(
+        to bottom,
+        transparent 12%,
+        rgba(var(--feature-red-rgb), 0.45) 48%,
+        rgba(var(--feature-red-rgb), 0.95) 100%
+    );
+    content: "";
+}
+
+.guide-card h6 {
+    margin-bottom: 0.5rem;
+    color: var(--white);
+    font-size: 1.75rem;
+    font-weight: 700;
+}
+
+.guide-card-copy {
+    position: absolute;
+    z-index: 1;
+    right: 1.25rem;
+    bottom: 1.25rem;
+    left: 1.25rem;
+    color: var(--white);
+    font-size: 1.1rem;
+    font-weight: 600;
+    line-height: 1.4;
+    text-align: left;
+    text-shadow: 0 1px 3px rgba(0, 0, 0, 0.75);
+}
+
+.guide-controls {
+    position: absolute;
+    inset: 50% 0 auto;
+    transform: translateY(-50%);
+    pointer-events: none;
+}
+
+.guide-control-set {
+    display: none;
+    width: 100%;
+    align-items: center;
+    justify-content: space-between;
+}
+
+#guide-slide-water:checked ~ .guide-controls .controls-water,
+#guide-slide-food:checked ~ .guide-controls .controls-food,
+#guide-slide-first-aid:checked ~ .guide-controls .controls-first-aid,
+#guide-slide-power:checked ~ .guide-controls .controls-power,
+#guide-slide-documents:checked ~ .guide-controls .controls-documents {
+    display: flex;
+}
+
+.guide-controls label {
+    display: grid;
+    width: 2.75rem;
+    height: 2.75rem;
+    place-items: center;
+    cursor: pointer;
+    pointer-events: auto;
+}
+
+.guide-controls label::before {
+    width: 0;
+    height: 0;
+    border-top: 0.6rem solid transparent;
+    border-bottom: 0.6rem solid transparent;
+    content: "";
+}
+
+.guide-arrow-left::before {
+    border-right: 0.8rem solid var(--red);
+}
+
+.guide-arrow-right::before {
+    border-left: 0.8rem solid var(--red);
+}
+
+.guide-slide-input:focus-visible ~ .guide-controls .guide-control-set label {
+    outline: 2px solid var(--red-dark);
+    outline-offset: 2px;
 }
 
 /* List / Paragraph styling */
@@ -348,8 +501,8 @@ main section {
     pointer-events: none;
     background: linear-gradient(
         90deg,
-        rgba(var(--red-dark-rgb), 1),
-        rgba(var(--red-dark-rgb), 0.50) 60%,
+        rgba(var(--feature-red-rgb), 1),
+        rgba(var(--feature-red-rgb), 0.50) 60%,
         transparent 75%
     );
 }
@@ -357,8 +510,8 @@ main section {
 .PandS .feature-image::after {
     background: linear-gradient(
         270deg,
-        rgba(var(--red-dark-rgb), 0.90),
-        rgba(var(--red-dark-rgb), 0.40) 60%,
+        rgba(var(--feature-red-rgb), 0.90),
+        rgba(var(--feature-red-rgb), 0.40) 60%,
         transparent 75%
     );
 }
@@ -385,6 +538,68 @@ main section {
     display: flex;
     flex-direction: column;
     justify-content: center;
+}
+
+.roadmap-timeline {
+    position: relative;
+    display: grid;
+    gap: 1rem;
+    width: 100%;
+    margin-top: 1rem;
+    padding-left: 2.75rem;
+    counter-reset: roadmap-step;
+}
+
+.roadmap-timeline::before {
+    position: absolute;
+    top: 2rem;
+    bottom: 2rem;
+    left: 0.875rem;
+    width: 3px;
+    background: linear-gradient(to bottom, var(--red), var(--line));
+    content: "";
+}
+
+.roadmap-timeline > div {
+    position: relative;
+    padding: 1rem 1.25rem;
+    border: 1px solid var(--line);
+    border-left: 4px solid var(--red);
+    border-radius: 0.5rem;
+    background: rgba(255, 255, 255, 0.88);
+    box-shadow: 0 0.25rem 0.75rem rgba(0, 0, 0, 0.12);
+    counter-increment: roadmap-step;
+}
+
+.roadmap-timeline > div::before {
+    position: absolute;
+    top: 1rem;
+    left: -2.75rem;
+    display: grid;
+    width: 1.75rem;
+    height: 1.75rem;
+    place-items: center;
+    border: 3px solid var(--white);
+    border-radius: 50%;
+    background: var(--red);
+    box-shadow: 0 0 0 2px var(--red);
+    color: var(--white);
+    content: counter(roadmap-step, decimal-leading-zero);
+    font-size: 0.7rem;
+    font-weight: 700;
+}
+
+.roadmap-timeline h3 {
+    margin-bottom: 0.35rem;
+    color: var(--red);
+    font-size: 1.2rem;
+}
+
+.roadmap-timeline p {
+    margin: 0;
+    color: var(--muted);
+    font-size: 1rem;
+    line-height: 1.45;
 }
 
 .roadmap-wrapper {
@@ -416,8 +631,14 @@ main section {
 
   .resources-space {
     flex-direction: column;
-    gap: 2rem;
+    gap: 3rem;
     padding: 1.5rem 1rem;
+  }
+
+  .hotlines-space,
+  .disaster-preparedness-space {
+    flex: none;
+    width: 100%;
   }
 
   .contacts-container {
@@ -447,6 +668,22 @@ main section {
     width: 100%;
 }
 
+.roadmap-text {
+    padding: 2rem 1.25rem;
+}
+
+.roadmap-timeline {
+    gap: 0.75rem;
+}
+
+.roadmap-timeline h3 {
+    font-weight: bold;
+}
+
+.roadmap-timeline > div {
+    padding: 0.9rem 1rem;
+}
+
 .street-map {
     min-height: 350px;
 }
@@ -458,5 +695,52 @@ main section {
 .feature-image img {
     width: 100%;
     max-width: 100%;
+    height: 100%;
+    min-height: 0;
+    object-fit: cover;
+}
+
+.feature-image {
+    flex: none;
+    height: min(80vw, 26rem);
+}
+
+.feature-image::after,
+.PandS .feature-image::after {
+    background: linear-gradient(
+        to top,
+        rgba(var(--feature-red-rgb), 0.95),
+        transparent 85%
+    );
+}
+
+.feature-text {
+    top: auto;
+    right: 1rem;
+    bottom: 1rem;
+    left: 1rem;
+    transform: none;
+    width: auto;
+}
+
+.PandS .feature-text {
+    left: 1rem;
+    right: 1rem;
+    text-align: left;
+}
+
+.PandS .feature-text h3,
+.PandS .feature-text p {
+    text-align: left;
+}
+
+.feature-text h3 {
+    font-size: clamp(1.25rem, 5vw, 1.8rem);
+    margin-bottom: 0.5rem;
+}
+
+.feature-text p {
+    font-size: clamp(0.9rem, 3.5vw, 1.1rem);
+    line-height: 1.4;
 }
 }
