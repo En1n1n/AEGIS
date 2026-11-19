@@ -2,13 +2,14 @@
     --red: #990a0f;
     --red-dark: #5b042a;
     --feature-red-rgb: 130, 1, 1;
-    --white: #cfcdd4;
+    --white: #ffffff;
     --text: #272834;
     --muted: #625f5f;
     --max-width: 100%;
 }
 
 /*header and navigation*/
+
 header {
     display: flex;
     align-items: center;
@@ -18,16 +19,29 @@ header {
     z-index: 1000;
     background-color: var(--red);
     color: var(--white);
-    padding: 1rem 0rem 1rem;
-    border-top: 1px solid var(--red);
+    padding: 1rem 0rem;
     border-bottom: 1px solid var(--red);
+    height: 94px;
+}
+
+header,
+.heading h1,
+footer, .features-heading h1{
+    background-image:
+        linear-gradient(rgba(153, 10, 15, 0.86), rgba(153, 10, 15, 0.86)),
+        url("https://images.squarespace-cdn.com/content/v1/65a57d4bac9ecb7aa417d71c/36f696ce-de51-4634-a1c0-6c42973998c8/contour-bg-02.png");
+    background-size: auto, 512px 512px;
+    background-repeat: no-repeat, repeat;
+    background-position: 0 0, 0 0;
+    background-attachment: scroll, fixed;
 }
 
 #logo {
     display: flex;
     align-items: center;
-    height: 60px;
+    height: 90px;
     flex: 0 0 auto;
+    margin-left: 1rem;
 }
 
 #logo img {
